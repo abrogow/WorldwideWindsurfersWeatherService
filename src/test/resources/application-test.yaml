@@ -1,0 +1,4 @@
+weather-forecast:
+  api:
+    url: localhost:8080
+    key: test

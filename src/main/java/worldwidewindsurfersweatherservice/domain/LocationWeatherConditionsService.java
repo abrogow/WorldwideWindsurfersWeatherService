@@ -41,7 +41,7 @@ public class LocationWeatherConditionsService {
         return windSpeed >= WIND_SPEED_MIN && windSpeed <= WIND_SPEED_MAX;
     }
 
-    private boolean temperatureInRange(int averageTemperature) {
+    private boolean temperatureInRange(double averageTemperature) {
         return averageTemperature >= AVERAGE_TEMP_MIN && averageTemperature <= AVERAGE_TEMP_MAX;
     }
 

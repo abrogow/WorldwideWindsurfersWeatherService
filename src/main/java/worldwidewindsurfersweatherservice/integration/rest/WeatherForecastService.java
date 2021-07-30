@@ -32,7 +32,9 @@ public class WeatherForecastService implements LocationWeatherConditionsProvider
 
         for(WindsurfingLocation location : availableLocations) {
             LocationWeatherConditions locationWeatherConditions = getLocationWeatherConditionsForDay(day, location);
-            locationWeatherConditionList.add(locationWeatherConditions);
+            if(locationWeatherConditions != null) {
+                locationWeatherConditionList.add(locationWeatherConditions);
+            }
         }
         return locationWeatherConditionList;
     }

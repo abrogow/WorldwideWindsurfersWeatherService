@@ -1,25 +1,4 @@
 #Application specific
-winsurfing-locations:
-  JASTARNIA:
-    location: Jastarnia (Poland)
-    latitude: 54.702839
-    longitude: 18.670719
-  BRIDGETOWN:
-    location: Bridgetown (Barbados)
-    latitude: 13.096851
-    longitude: -59.614483
-  FORTALEZA:
-    location: Fortaleza (Brazil)
-    latitude: -3.732714
-    longitude: -38.526997
-  PISSOURI:
-    location: Pissouri (Cyprus)
-    latitude: 34.670231
-    longitude: 32.701118
-  LE_MORNE:
-    location: Le Morne (Mauritius)
-    latitude: -20.469570
-    longitude: 57.344238
 weather-forecast:
   api:
     url: https://api.weatherbit.io/v2.0/

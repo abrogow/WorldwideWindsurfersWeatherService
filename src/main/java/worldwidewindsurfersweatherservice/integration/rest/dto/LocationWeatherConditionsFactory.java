@@ -8,6 +8,6 @@ import worldwidewindsurfersweatherservice.integration.yaml.WindsurfingLocation;
 public class LocationWeatherConditionsFactory {
 
     public LocationWeatherConditions create(WindsurfingLocation location, LocationWeatherForecastDto locationWeatherForecastDto) {
-        return new LocationWeatherConditions(location, locationWeatherForecastDto.getTemp(), locationWeatherForecastDto.getWindSpd());
+        return new LocationWeatherConditions(location.getLocation(), locationWeatherForecastDto.getTemp(), locationWeatherForecastDto.getWindSpd());
     }
 }

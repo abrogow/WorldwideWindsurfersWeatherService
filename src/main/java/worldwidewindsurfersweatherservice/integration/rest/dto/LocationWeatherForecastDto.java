@@ -19,7 +19,7 @@ public class LocationWeatherForecastDto {
     LocalDate validDate;
 
     @JsonProperty("temp")
-    int temp;
+    double temp;
 
     @JsonProperty("wind_spd")
     double windSpd;
