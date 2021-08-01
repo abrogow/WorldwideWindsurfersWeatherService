@@ -10,6 +10,9 @@ import worldwidewindsurfersweatherservice.integration.yaml.config.CacheConfig;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 @Slf4j
@@ -27,6 +30,10 @@ public class WindsurfingLocationRepository {
 
             ClassLoader classLoader = getClass().getClassLoader();
             File file = new File(classLoader.getResource(WINDSURFING_LOCATION_FILE_LOCATION).getFile());
+
+            byte[] encoded = Files.readAllBytes(Paths.get(file.getPath()));
+            String content =  new String(encoded, StandardCharsets.US_ASCII);
+
 
             return  mapper.readValue(file, new TypeReference<List<WindsurfingLocation>>(){});
         } catch (IOException e) {
