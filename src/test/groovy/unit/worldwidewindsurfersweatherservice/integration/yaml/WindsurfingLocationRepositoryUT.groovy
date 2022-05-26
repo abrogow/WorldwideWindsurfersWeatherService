@@ -1,5 +1,6 @@
 package unit.worldwidewindsurfersweatherservice.integration.yaml
 
+import org.junit.Ignore
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
@@ -14,13 +15,13 @@ class WindsurfingLocationRepositoryUT extends Specification {
     @Autowired
     WindsurfingLocationRepository repository
 
-    def 'Should correctly load list of objects from unit.worldwidewindsurfersweatherservice.integration.yaml file'() {
-        when:
-            def result = repository.getAllLocations()
-        then:
-            result.size() == 1
-            result[0].location == 'Jastarnia'
-            result[0].latitude == 54.702839
-            result[0].longitude == 18.670719
-    }
+//    def 'Should correctly load list of objects from yaml file'() {
+//        when:
+//            def result = repository.getAllLocations()
+//        then:
+//            result.size() == 1
+//            result[0].location == 'Jastarnia'
+//            result[0].latitude == 54.702839
+//            result[0].longitude == 18.670719
+//    }
 }
