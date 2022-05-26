@@ -18,7 +18,7 @@ class WindsurfingLocationRepositoryUT extends Specification {
         when:
             def result = repository.getAllLocations()
         then:
-            result.size == 1
+            result.size() == 1
             result[0].location == 'Jastarnia'
             result[0].latitude == 54.702839
             result[0].longitude == 18.670719
