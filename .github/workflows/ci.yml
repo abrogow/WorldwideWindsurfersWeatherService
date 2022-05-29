@@ -32,9 +32,11 @@ jobs:
       run: ./mvnw clean install
 
     - uses: mr-smithers-excellent/docker-build-push@v5
-      name: Build and Push Docker Image
+      name: Build & Push Docker Image do DockerHub
       with:
         image: abrogow/demo-repo
         registry: docker.io
+        tags: latest
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
